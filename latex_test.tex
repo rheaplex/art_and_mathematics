@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{exscale,relsize} 
+\usepackage{color}
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newcommand\Red{{\color{red} \blacksquare}}
+\newcommand\Yellow{{\color{yellow} \blacksquare}}
+\newcommand\Blue{{\color{blue} \blacksquare}}
+\newcommand\Primaries{{\mathbb C}}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\section {Colour}
+
+$\Primaries = \left\{ \Blue, \Red, \Yellow \right\}$
+
+${\mathbb C}' = \left\{ {\color{orange} \blacksquare }, {\color{purple} \blacksquare }, {\color{green} \blacksquare } \right\}$
+
+
+
+\section {Mathematical Equations}
+
+Learning latex maths markup.
+
+$
+ \textcolor{red}{\bullet{}} 
+$
+
+$
+{\color{blue} \blacksquare }
+$
+
+
+$
+\cos{x}=0\Leftrightarrow x\in\{(n+$$\frac{1}{2}$$)\pi:n\in\mathbb{Z}\}
+$
+
+
+
+$
+\left[\frac{\left(\frac{x+3}{7}\right)+5}{3x+8}\right] 
+$
+
+$x_1 = y^2 = z^4_1$
+
+$x_{ijk}$
+
+$\left( \frac{n+2}{3} \right)$
+
+$\left\{ \frac{ n^2 + n}{ n^2 - n} \right\}$
+
+$\in , \infty ,\exists, \forall, \Rightarrow ,\leftrightarrow , \pi ,\sum,\int$
+
+
+$
+f(x)=\int_{-\infty}^x\frac{(e^{-t^2})}{\sqrt{\pi^x}}dt
+$
+
+
+
+
+$
+\mathcal{P}(X)
+$
+
+$
+M^2 = \left(
+\begin{array}{cc}
+M^2_{11} & M^2_{18}\\
+M^2_{18} & M^2_{88}
+\end{array}
+\right)
+$
+
+
+$
+f(x) = \sqrt{1+x} \quad (x \ge -1)
+f(x) = \sqrt{1+x}, \quad x \ge -1
+f(x) \sim x^2 \quad (x\to\infty)
+f(x) \sim x^2, \quad x\to\infty
+$
+
+Simple equations, like $x^y$ or $x_n = \sqrt{a + b}$ can be typeset right
+in the text line by enclosing them in a pair of single dollar sign symbols.
+Don't forget that if you want a real dollar sign in your text, like \$2000,
+you have to use the \verb+\$+ command.
+
+A more complicated equation should be typeset in {\em displayed math\/} mode,
+like this:
+\[
+z \left( 1 \ +\ \sqrt{\omega_{i+1} + \zeta -\frac{x+1}{\Theta +1} y + 1}
+\ \right)
+\ \ \ =\ \ \ 1
+\]
+The ``equation'' environment displays your equations, and automatically
+numbers them consecutively within your document, like this:
+\begin{equation}
+\left[
+{\bf X} + {\rm a} \ \geq\
+\underline{\hat a} \sum_i^N \lim_{x \rightarrow k} \delta C
+\right]
+\end{equation}
+
+
+\[ \sum \neq \mathlarger{\sum} \] 
+and $\frac{1}{2} \neq \frac{\mathlarger 1} 
+{2}$ but $N = \mathlarger {N}$ 
+
+
+\[ \mathsmaller\sum_{i=1}^n \neq 
+\sum_{i=1}^n \neq \mathlarger\sum_{i=1}^n 
+\qquad \mathsmaller\int_0^\infty \neq 
+\int_0^\infty \neq \mathlarger\int_0^\infty 
+\] 
+
+
+\[ a \times b \neq a \mathlarger{\times} b \neq 
+a \mathbin{\mathlarger\times} b \]
+
+
+\end{document}
+
+
+
+\end{document}  
