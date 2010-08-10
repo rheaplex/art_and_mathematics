@@ -1,17 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[11pt]{article}
+
 \usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+
 \usepackage{exscale,relsize} 
 \usepackage{color}
-\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
 %\geometry{landscape}                % Activate for for rotated page geometry
 \usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
+
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New graphics entities
@@ -59,13 +64,20 @@
 \newcommand\DiagonalDownLine{{\setminus}}
 \newcommand\Lines{L}
 
+
+\newcommand\HorizUpCurve{{\frown}}
+\newcommand\HorizDownCurve{{\smile}}
+\newcommand\VertLeftCurve{{)}}
+\newcommand\VertRightCurve{{(}}
+\newcommand\Curves{A}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document body
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Art}
+\title{Art Mathematics}
 \author{Rob Myers}
-%\date{}                                           % Activate to display a given date or no date
+%\date{} % Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -75,6 +87,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Notation}
+
+See \cite{dean} for this notation.
 
 $<$ - Numeric less than.
 
@@ -100,7 +114,7 @@ $=$ - Numeric or set equality.
 
 $\sum $- Numeric or aesthetic sum.
 
-$(a, b)$ - An ordered pair. Also representable as a set using XXXX's notation: \\
+$(a, b)$ - An ordered pair. Also representable as a set \cite{suppes}: \\
     $\left\{ \left\{ a \right\}, \left\{ a, b \right\} \right\}$ \\
 We use this notation when manipulating the elements of an ordered pair.
 
@@ -109,8 +123,6 @@ $\left\{ a, b \right\}$ - A set. The set consists of the listed elements.
 $\left\{ A \mid B \bullet C \right\}$ - A set comprehension. 
 The members of the set are the result of the expression C, 
 which is applied to every value of the variables introduced in A for which B is true.
-
-The notation used is that of "The Essence Of Computing: Discrete mathematics", XXXX, YEAR, PUBLISHER.
 
 \pagebreak
 
@@ -210,7 +222,7 @@ We can get every member of a power set of ordered pairs with unique first items.
 
 $A = \left\{\left\{(1,2), (1, 4), (5, 4)\right\}, \left\{(1,2), (1, 4), (5, 4)\right\}\right\}$
 
-$B = \left\{a :\in A | \#{}a = (\#{}\left\{ x in a \bullet \cup x \right\})\right\}$
+$B = \left\{a :\in A | \#{}a = (\#{}\left\{ x \in a \bullet \cup x \right\})\right\}$
 
 And we can sum that
 
@@ -254,6 +266,8 @@ $\Shapes = \left\{  \PointShape, \CircleShape, \LineShape, \TriangleShape, \Squa
 
 $\Lines = \left\{  \VerticalLine, \DiagonalUpLine, \HorizontalLine, \DiagonalDownLine  \right\}$
 
+$\Curves = \left\{  \VertLeftCurve, \VertRightCurve, \HorizUpCurve, \HorizDownCurve  \right\}$
+
 \section{Shape and Colour}
 
 $\SquareShape + \Blue = {\color{blue} \blacksquare}$ \\
@@ -290,7 +304,7 @@ $Z = \left\{ x : \in Y, y : \in  x \bullet \cup (\cup y) \right\} $ \\ % Each it
 
 Alternative Z:
 
-$Z = \left\{ x : \in Y bullet \cup (\cup x) \right\}$ \\  % Each member set combined
+$Z = \left\{ x : \in Y \bullet \cup (\cup x) \right\}$ \\  % Each member set combined
 
 % So what can we express that LeWitt didn't do?
 
@@ -344,36 +358,38 @@ $D = \left\{ x \in B \bullet x + \CircleShape \right\}$
 
 \section{Godel Numbering}
 
-Godel Numbering, named after Austrian mathematician Kurt Godel, is the encoding of mathematical statements into numbers by some arbitrary scheme. The scheme used here is derived from that used by Douglas Hofstadter in his "Godel, Escher, Bach - An Eternal Golden Braid", YEAR, PUBLISHER.
+Godel Numbering, named after Austrian mathematician Kurt Godel, is the encoding of mathematical statements into numbers by some arbitrary scheme. The scheme used here is derived from that used by Douglas Hofstadter in "Godel, Escher, Bach: an Eternal Golden Braid" \cite{hofstadter}.
 
 Several post-conceptual artists have used numbers as the content of their artworks. Godel Numbering a set representation of an artwork refers to this among other things.
 
 \subsection{Notation}
 
-Using a variant of Hofstadter's scheme.
+Using a variant of Hofstadter's scheme:
 
-\{ = 11 \\
-\} = 12 \\
-$, = 13$ \\
-$\mid  = 21$ \\
-$\bullet = 22$ \\
-$= = 23$ \\
-$\in = 31$ \\
-$\power = 41$ \\
-$\#{} = 42$ \\
-$< = 43$ \\
-$\sum = 44$ \\
-$x = 51$ \\
-$\Primaries = 61$ \\
-$D = 74$ \\
-$E = 75$ \\
-$\Blue = 81$ \\
-$\Red = 82$ \\
-$\Yellow = 82$ \\
-$\Black = 84$ \\
-$hsv = 89$ \\
-$0 =  91$ \\
-$S = 92$ \\
+\begin{tabular}{ l l }
+  \{ & 11 \\
+  \} & 12 \\
+  $,$ & $13$ \\
+  $\mid$  & $21$ \\
+  $\bullet$ & $22$ \\
+  $=$ & $23$ \\
+  $\in$ & $31$ \\
+  $\power$ & $41$ \\
+  $\#{}$ & $42$ \\
+  $<$ & $43$ \\
+  $\sum$ & $44$ \\
+  $x$ & $51$ \\
+  $\Primaries$ & $61$ \\
+  $D$ & $74$ \\
+  $E$ & $75$ \\
+  $\Blue$ & $81$ \\
+  $\Red$ & $82$ \\
+  $\Yellow$ & $82$ \\
+  $\Black$ & $84$ \\
+  $hsv$ & $89$ \\
+  $0$ &  $91$ \\
+  $S$ & $92$ \\
+\end{tabular}
 
 \subsection{All one-, two-, three- \& four part combinations of four transparent colours}
 
@@ -395,11 +411,68 @@ $1151311181138213831384131241118113821383138413122142514392929292929122445112$
 
 \section{Saville Colouring}
 
-Saville colouring, named here after British graphic designer Peter Saville, is the encoding of numeric or textual information into arbitrary sequences of colours. Such a scheme was used by Saville on a number of record covers for Factory Records in the 1980s, with the key being placed on the back cover of New Order's "Power, Corruption and Lies", XXXX.
+Saville colouring, named here after British graphic designer Peter Saville, is the encoding of numeric or textual information into arbitrary sequences of colours. Such a scheme was used by Saville on a number of record covers for Factory Records in the 1980s \cite{saville}, with the key being placed on the back cover of New Order's "Power, Corruption and Lies", 1983.
+
+The colours Saville used to represent the numbers 1..9 are (in CMYK):
+
+\begin{tabular}{ l l }
+  1 & 70C 40Y \\
+  2 & 100Y \\
+  3 & 50C 50M \\
+  4 & 60M 100Y \\
+  5 & 40C \\
+  6 & 40M \\
+  7 & 40M 80C \\
+  8 & 100M \\
+  9 & 100C \\
+\end{tabular}
+
+A more generic colour scheme would be:
+
+\begin{tabular}{ l l }
+1 & Cyan \\
+2 & Magenta \\
+3 & Yellow \\
+4 & Black \\
+5 & Red \\
+6 & Green \\
+7 & Blue \\
+8 & Orange \\
+9 & Purple \\
+\end{tabular}
 
 Many artists have used arbitrary grids or other arrays of arbitrary colours as the content of their artworks. Saville Colouring a set representation of an artwork refers to this among other things.
 
-\subsection{Colours}
+\pagebreak
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lines and Curves
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Lines and Curves}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{hofstadter9999}
+  \bibitem[Dean]{dean} Neville Dean.
+    \emph{The Essence Of Computing: Discrete mathematics.}
+    Prentice Hall, London, 1997.
+  \bibitem[Hofstadter]{hofstadter} Douglas R. Hofstadter.
+    \emph{Godel, Escher, Bach: an Eternal Golden Braid.}
+    20th Anniversary Edition.
+    Penguin Books Ltd., London, 2000.
+  \bibitem[Saville]{saville} Peter Saville.
+    \emph{Annotated artwork for the New Order album 
+          ``Power Corruption and Lies''.}
+    Creative Review, January 2003 (Front Cover).
+  \bibitem[Suppes]{suppes} Patrick Suppes.
+    \emph{Axiomatic Set Theory.}
+    Dover Publications Inc., New York, 1972.
+\end{thebibliography}
 
 \end{document}
